@@ -17,7 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.recetarioapp.ui.theme.RecetarioTheme
+import com.example.recetarioapp.ui.theme.RecetarioAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreen()
+                    NewRecipeScreen()
                 }
             }
         }
@@ -82,11 +82,11 @@ private val sampleCategories = listOf(
 @Preview(showBackground = true, device = Devices.PIXEL_4)
 @Composable
 fun PreviewPhone() {
-    RecetarioTheme { HomeScreen() }
+    RecetarioAppTheme { HomeScreen() }
 }
 
 @Preview(showBackground = true, device = Devices.PIXEL_C, name = "Tablet")
 @Composable
 fun PreviewTablet() {
-    RecetarioTheme { HomeScreen() }
+    RecetarioAppTheme { HomeScreen() }
 }
